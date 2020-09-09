@@ -22,13 +22,18 @@ app.listen(8080);
 const url = "mongodb://localhost:27017/librarydb";
 
 // let db;
-mongoose.connect(url, { useNewUrlParser: true }, function (err) {
-    if (err) {
-        console.log("Error ", err);
-    } else {
-        console.log("Connected successfully to server");
+mongoose.connect(
+    url,
+    { useNewUrlParser: true },
+    { useUnifiedTopology: true },
+    function (err) {
+        if (err) {
+            console.log("Error ", err);
+        } else {
+            console.log("Connected successfully to server");
+        }
     }
-});
+);
 
 app.get("/", function (req, res) {
     res.sendFile(__dirname + "/views/index.html");

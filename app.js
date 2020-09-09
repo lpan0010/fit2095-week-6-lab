@@ -24,8 +24,8 @@ const url = "mongodb://localhost:27017/librarydb";
 // let db;
 mongoose.connect(
     url,
-    { useNewUrlParser: true },
-    { useUnifiedTopology: true },
+    { useNewUrlParser: true, useUnifiedTopology: true },
+
     function (err) {
         if (err) {
             console.log("Error ", err);

@@ -1,0 +1,42 @@
+<html>
+    <link rel="stylesheet" href="updateBook.css" />
+    <body>
+        <header>
+            <button onclick="location.href='/'">Home</button>
+            <button onclick="location.href='/getallbooks'">View Books</button>
+            <button onclick="location.href='/getallauthors'">
+                View Authors
+            </button>
+            <button onclick="location.href='/addbook'">Add Book</button>
+            <button onclick="location.href='/addauthor'">Add Author</button>
+            <button onclick="location.href='/updatebook'">Update Book</button>
+            <button onclick="location.href='/deletebook'">Delete Book</button>
+        </header>
+        <img id="background" src="library.jpg" />
+        <h1>Update Author</h1>
+        <form action="/updateauthor" method="POST">
+            <div id="container">
+                <p>Please enter the following details to update an author</p>
+                <label for="id"><b>ID</b></label>
+                <input
+                    type="text"
+                    placeholder="ID"
+                    name="id"
+                    id="id"
+                    required
+                />
+
+                <label for="new number"><b>New Book Number</b></label>
+                <input
+                    type="text"
+                    placeholder="New Book Number"
+                    name="nob"
+                    id="nob"
+                    required
+                />
+
+                <button type="submit" id="submit">Update Author</button>
+            </div>
+        </form>
+    </body>
+</html>

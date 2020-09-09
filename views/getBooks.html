@@ -1,0 +1,49 @@
+<html>
+    <link rel="stylesheet" href="getBook.css">
+    <body>
+        <header>
+            <button onclick="location.href='/'">Home</button>
+            <button onclick="location.href='/getallauthors'">
+                View Authors
+            </button>
+            <button onclick="location.href='/addbook'">Add Book</button>
+            <button onclick="location.href='/addauthor'">Add Author</button>
+            <button onclick="location.href='/updatebook'">Update Book</button>
+            <button onclick="location.href='/updateauthor'">
+                Update Author
+            </button>
+            <button onclick="location.href='/deletebook'">Delete Book</button>
+        </header>
+        <img id="background" src="library.jpg" />
+        <h1>Books</h1>
+        <table id="books">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Date of Publication</th>
+                <th>Summary</th>
+            </tr>
+        </tr>
+        <% for ( let i =0; i< books.length;i++){ %>
+            <tr>
+                <td>
+                    <%= books[i].title %>
+                </td>
+                <td>
+                    <%= books[i].author.name.firstName + " " + books[i].author.name.lastName %>
+                </td>
+                <td>
+                    <%= books[i].isbn %>
+                </td>
+                <td>
+                    <%= books[i].date %>
+                </td>
+                <td>
+                    <%= books[i].summary%>
+                </td>
+            </tr>
+            <% }%>
+        </table>
+    </body>
+</html>

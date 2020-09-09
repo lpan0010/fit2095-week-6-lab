@@ -1,0 +1,68 @@
+<html>
+    <link rel="stylesheet" href="updateBook.css" />
+    <body>
+        <header>
+            <button onclick="location.href='/'">Home</button>
+            <button onclick="location.href='/getallbooks'">View Books</button>
+            <button onclick="location.href='/getallauthors'">
+                View Authors
+            </button>
+            <button onclick="location.href='/addbook'">Add Book</button>
+            <button onclick="location.href='/addauthor'">Add Author</button>
+            <button onclick="location.href='/updateauthor'">
+                Update Author
+            </button>
+            <button onclick="location.href='/deletebook'">Delete Book</button>
+        </header>
+        <img id="background" src="library.jpg" />
+        <h1>Update Book</h1>
+        <form action="/updatebook" method="POST">
+            <div id="container">
+                <p>Please enter the following details to update a book</p>
+                <label for="isbn"><b>ISBN</b></label>
+                <input
+                    type="text"
+                    placeholder="ISBN"
+                    name="isbn"
+                    id="isbn"
+                    required
+                />
+                <div id="line"></div>
+                <label for="title"><b>Title</b></label>
+                <input
+                    type="text"
+                    placeholder="Title"
+                    name="title"
+                    id="title"
+                    required
+                />
+                <label for="author"><b>Author</b></label>
+                <input
+                    type="text"
+                    placeholder="Author"
+                    name="author"
+                    id="author"
+                    required
+                />
+                <label for="dop"><b>Date of Publication</b></label>
+                <input
+                    type="date"
+                    placeholder="Date Of Publication"
+                    name="dop"
+                    id="dop"
+                    required
+                />
+                <label for="isbn"><b>Summary</b></label>
+                <input
+                    type="text"
+                    placeholder="Summary"
+                    name="summary"
+                    id="summary"
+                    required
+                />
+
+                <button type="submit" id="submit">Update Book</button>
+            </div>
+        </form>
+    </body>
+</html>

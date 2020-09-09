@@ -1,0 +1,49 @@
+<html>
+    <link rel="stylesheet" href="getBook.css">
+    <body>
+        <header>
+            <button onclick="location.href='/'">Home</button>
+            <button onclick="location.href='/getallbooks'">View Books</button>
+            <button onclick="location.href='/addauthor'">Add Author</button>
+            <button onclick="location.href='/addbook'">Add Book</button>
+            <button onclick="location.href='/updatebook'">Update Book</button>
+            <button onclick="location.href='/updateauthor'">
+                Update Author
+            </button>
+            <button onclick="location.href='/deletebook'">
+                Delete Book
+            </button>
+        </header>
+        <img id="background" src="library.jpg" />
+        <h1>Authors</h1>
+        <table id="books">
+            <tr>
+                <th>Name</th>
+                <th>Date of Birth</th>
+                <th>Address</th>
+                <th>Number of Books</th>
+            </tr>
+        </tr>
+        <% for ( let i =0; i< authors.length;i++){ %>
+            <tr>
+                <td>
+                    <%= authors[i]._id %>
+                </td>
+                <td>
+                    <%= authors[i].name.firstName + " " + authors[i].name.lastName %>
+                </td>
+                <td>
+                    <%= authors[i].dob %>
+                </td>
+                <td>
+                    <%= authors[i].address.unit + " " + authors[i].address.street + " " + authors[i].address.suburb + " " + authors[i].address.state%>
+                </td>
+                <td>
+                    <%= authors[i].numBooks %>
+                </td>
+                
+            </tr>
+            <% }%>
+        </table>
+    </body>
+</html>

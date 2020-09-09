@@ -1,0 +1,92 @@
+<html>
+    <link rel="stylesheet" href="addAuthor.css" />
+    <body>
+        <header>
+            <button onclick="location.href='/'">Home</button>
+            <button onclick="location.href='/getallbooks'">View Books</button>
+            <button onclick="location.href='/getallauthors'">
+                View Authors
+            </button>
+            <button onclick="location.href='/addbook'">Add Book</button>
+            <button onclick="location.href='/updatebook'">Update Book</button>
+            <button onclick="location.href='/updateauthor'">
+                Update Author
+            </button>
+            <button onclick="location.href='/deletebook'">Delete Book</button>
+        </header>
+        <img id="background" src="library.jpg" />
+        <form action="/addauthor" method="POST">
+            <h1>Add New Author</h1>
+            <div id="container">
+                <p>Please enter the following details to add an author</p>
+                <div id="name">
+                    <input
+                        type="text"
+                        placeholder="First Name"
+                        name="fname"
+                        id="fname"
+                        required
+                    />
+
+                    <input
+                        type="text"
+                        placeholder="Last Name"
+                        name="lname"
+                        id="lname"
+                        required
+                    />
+                </div>
+
+                <label for="dob"><b>Date of Birth</b></label>
+                <input
+                    type="date"
+                    placeholder="Date of Birth"
+                    name="dob"
+                    id="dob"
+                    required
+                />
+
+                <div id="address">
+                    <input
+                        type="text"
+                        placeholder="Unit"
+                        name="unit"
+                        id="unit"
+                    />
+
+                    <input
+                        type="text"
+                        placeholder="Street"
+                        name="street"
+                        id="street"
+                    />
+
+                    <input
+                        type="text"
+                        placeholder="Suburb"
+                        name="suburb"
+                        id="suburb"
+                    />
+
+                    <input
+                        type="text"
+                        placeholder="State"
+                        name="state"
+                        id="state"
+                    />
+                </div>
+
+                <label for="number of books"><b>Number of Books</b></label>
+                <input
+                    type="text"
+                    placeholder="Number of Books"
+                    name="nob"
+                    id="nob"
+                    required
+                />
+
+                <button type="submit" id="submit">Add Author</button>
+            </div>
+        </form>
+    </body>
+</html>

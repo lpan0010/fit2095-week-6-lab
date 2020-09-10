@@ -8,7 +8,15 @@ let authorSchema = mongoose.Schema({
             type: String,
             required: true,
         },
-        lastName: String,
+        lastName: {
+            type: String,
+            validate: {
+                validator: function (name) {
+                    return name.length > 5;
+                },
+                message: "The last name should be greater than 5 characters",
+            },
+        },
     },
     dob: {
         type: Date,
@@ -23,9 +31,15 @@ let authorSchema = mongoose.Schema({
                 validator: function (state) {
                     return state.length >= 2 && state.length <= 3;
                 },
+                message: "The state needs to be 2-3 letters long",
             },
         },
-        suburb: String,
+        suburb: {
+            type: String,
+            get: function (suburb) {
+                return suburb.charAt(0).toUpperCase() + suburb.slice(1);
+            },
+        },
         street: String,
         unit: Number,
     },

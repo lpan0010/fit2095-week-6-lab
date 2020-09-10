@@ -29,5 +29,9 @@ let bookSchema = mongoose.Schema({
         },
     },
     summary: { type: String },
+    category: {
+        type: String,
+        default: "Drama",
+    },
 });
 module.exports = mongoose.model("Book", bookSchema);
